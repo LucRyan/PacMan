@@ -10,8 +10,8 @@ public class Pellet {
 	private Texture pelletTexture;
 	
 	public Pellet() {		
-		pelletMesh = TestGDX.resourceManager.getMesh("pellet");
-		pelletTexture = TestGDX.resourceManager.getTexture("pellet");
+		pelletMesh = PacMan.resourceManager.getMesh("pellet");
+		pelletTexture = PacMan.resourceManager.getTexture("pellet");
 	}
 
 	public Vector3 getPelletPosition() {
