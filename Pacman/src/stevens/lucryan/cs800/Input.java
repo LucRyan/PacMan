@@ -15,39 +15,39 @@ public class Input implements InputProcessor {
 	boolean[] buttons = new boolean[10];
 
 	public void moveUp() {
-		TestGDX.camera.position.set(new Vector3(TestGDX.camera.position.x + TestGDX.camera.direction.nor().x,
-				TestGDX.camera.position.y + TestGDX.camera.direction.nor().y, TestGDX.camera.position.z + TestGDX.camera.direction.nor().z));
-		TestGDX.camera.update();
+		PacMan.camera.position.set(new Vector3(PacMan.camera.position.x + PacMan.camera.direction.nor().x,
+				PacMan.camera.position.y + PacMan.camera.direction.nor().y, PacMan.camera.position.z + PacMan.camera.direction.nor().z));
+		PacMan.camera.update();
 	}
 
 	public void moveDown() {
-		TestGDX.camera.position.set(new Vector3(TestGDX.camera.position.x - TestGDX.camera.direction.nor().x,
-				TestGDX.camera.position.y - TestGDX.camera.direction.nor().y, TestGDX.camera.position.z - TestGDX.camera.direction.nor().z));
-		TestGDX.camera.update();
+		PacMan.camera.position.set(new Vector3(PacMan.camera.position.x - PacMan.camera.direction.nor().x,
+				PacMan.camera.position.y - PacMan.camera.direction.nor().y, PacMan.camera.position.z - PacMan.camera.direction.nor().z));
+		PacMan.camera.update();
 	}
 
 	public void turnLeft() {
-		Vector3 currentPosition = new Vector3(TestGDX.camera.position.x,
-				TestGDX.camera.position.y, TestGDX.camera.position.z);
+		Vector3 currentPosition = new Vector3(PacMan.camera.position.x,
+				PacMan.camera.position.y, PacMan.camera.position.z);
 		
-		TestGDX.camera.translate(-currentPosition.x, -currentPosition.y, -currentPosition.z);
-		TestGDX.camera.rotate(new Vector3(0.0f, 1.0f, 0.0f), 1.0f);
-		//TestGDX.camera.rotate(new Vector3(1.0f, 0.0f, 0.0f), 1.0f);
-		TestGDX.camera.translate(currentPosition.x, currentPosition.y, currentPosition.z);
+		PacMan.camera.translate(-currentPosition.x, -currentPosition.y, -currentPosition.z);
+		PacMan.camera.rotate(new Vector3(0.0f, 1.0f, 0.0f), 1.0f);
+		//PacMan.camera.rotate(new Vector3(1.0f, 0.0f, 0.0f), 1.0f);
+		PacMan.camera.translate(currentPosition.x, currentPosition.y, currentPosition.z);
 
-		TestGDX.camera.update();
+		PacMan.camera.update();
 	}
 
 
 	public void turnRight() {
-		Vector3 currentPosition = new Vector3(TestGDX.camera.position.x,
-				TestGDX.camera.position.y, TestGDX.camera.position.z);
-		TestGDX.camera.translate(-currentPosition.x, -currentPosition.y, -currentPosition.z);
-		TestGDX.camera.rotate(new Vector3(0.0f, 1.0f, 0.0f), -1.0f);
-		//TestGDX.camera.rotate(new Vector3(1.0f, 0.0f, 0.0f), -1.0f);
-		TestGDX.camera.translate(currentPosition.x, currentPosition.y, currentPosition.z);
+		Vector3 currentPosition = new Vector3(PacMan.camera.position.x,
+				PacMan.camera.position.y, PacMan.camera.position.z);
+		PacMan.camera.translate(-currentPosition.x, -currentPosition.y, -currentPosition.z);
+		PacMan.camera.rotate(new Vector3(0.0f, 1.0f, 0.0f), -1.0f);
+		//PacMan.camera.rotate(new Vector3(1.0f, 0.0f, 0.0f), -1.0f);
+		PacMan.camera.translate(currentPosition.x, currentPosition.y, currentPosition.z);
 		
-		TestGDX.camera.update();
+		PacMan.camera.update();
 
 	}
 
