@@ -9,7 +9,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.Texture.TextureFilter;
 import com.badlogic.gdx.graphics.g3d.loaders.obj.ObjLoader;
 
-public class PacMan implements ApplicationListener {
+public class TestGDX implements ApplicationListener {
 
 	public static PerspectiveCamera camera;
 	//private float angle;  //spin
